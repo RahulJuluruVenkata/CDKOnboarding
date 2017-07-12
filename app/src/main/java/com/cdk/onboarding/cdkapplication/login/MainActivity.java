@@ -1,4 +1,4 @@
-package com.cdk.onboarding.cdkapplication;
+package com.cdk.onboarding.cdkapplication.login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.cdk.onboarding.cdkapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.cdk.onboarding.cdkapplication;
+package com.cdk.onboarding.cdkapplication.home;
 
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.Button;
+
+import com.cdk.onboarding.cdkapplication.R;
 
 public class CDKHomeGrid extends AppCompatActivity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
@@ -16,6 +18,7 @@ public class CDKHomeGrid extends AppCompatActivity implements GestureDetector.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid_cdk_home);
+
         //myMessage = (Button) findViewById(R.id.);
         this.gestureDetectorCompat = new GestureDetectorCompat(this, this);
         gestureDetectorCompat.setOnDoubleTapListener(this);

@@ -1,4 +1,4 @@
-package com.cdk.onboarding.cdkapplication;
+package com.cdk.onboarding.cdkapplication.login;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.cdk.onboarding.cdkapplication.R;
 
 public class TopSectionFragment extends Fragment {
 

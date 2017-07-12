@@ -1,45 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <EditText
-        android:id="@+id/txt_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:hint="@string/place_holder_username"
-        android:width="300dp"/>
-
-    <EditText
-        android:id="@+id/txt_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txt_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:hint="@string/place_holder_password"
-        android:width="300dp"/>
-
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txt_password"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/place_holder_login"
-         />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <fragment
         android:id="@+id/frg_cdk_global"
-        android:name="com.cdk.onboarding.cdkapplication.CDKIconFragment"
+        android:name="com.cdk.onboarding.cdkapplication.login.CDKIconFragment"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@id/btn_login"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        tools:layout="@layout/bottom_picture_fragment" />
+        android:layout_marginTop="83dp"
+        tools:layout="@layout/cdk_icon_fragment" />
+
+    <fragment
+        android:id="@+id/frg_login_fragment"
+        android:name="com.cdk.onboarding.cdkapplication.login.CDKLoginFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frg_cdk_global"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        tools:layout="@layout/cdk_login_fragment" />
+
 
 </RelativeLayout>
