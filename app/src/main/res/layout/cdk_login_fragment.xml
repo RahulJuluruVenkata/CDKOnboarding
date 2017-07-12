@@ -19,8 +19,9 @@
         android:layout_below="@id/txt_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:width="300dp"
         android:hint="@string/place_holder_password"
-        android:width="300dp"/>
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btn_login"

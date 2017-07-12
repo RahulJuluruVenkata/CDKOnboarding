@@ -3,14 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <fragment
-        android:id="@+id/frg_cdk_global"
-        android:name="com.cdk.onboarding.cdkapplication.login.CDKIconFragment"
+    <EditText
+        android:enabled="false"
+        android:text="@string/cdk_home_page_banner"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        tools:layout="@layout/cdk_icon_fragment" />
-
+        android:layout_above="@+id/frg_cdk_global"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
 </RelativeLayout>
