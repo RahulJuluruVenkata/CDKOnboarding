@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CDK Onboarding application</string>
+    <string name="place_holder_username">Email id / username</string>
+    <string name="place_holder_password">Password</string>
+    <string name="place_holder_login">Login</string>
+    <string name="header_cdk_home_screen">Enter details</string>
+
+    <!-->
+        CDK Home page string variables
+    -->
+    <string name="cdk_home_page_banner">Welcome to CDK family!</string>
+</resources>
