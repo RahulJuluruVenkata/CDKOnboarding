@@ -4,14 +4,4 @@
     android:layout_height="match_parent"
     android:background="@drawable/cdk_image">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:textColor="@android:color/holo_green_dark" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_green_dark" />
 </RelativeLayout>

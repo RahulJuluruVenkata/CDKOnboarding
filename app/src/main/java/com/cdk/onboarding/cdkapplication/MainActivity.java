@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Listening to button click event
-        Button loginButton = (Button)findViewById(R.id.btnLogin);
+        Button loginButton = (Button)findViewById(R.id.btn_login);
         loginButton.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v){
-                        EditText textWelcome = (EditText) findViewById(R.id.txtWelcome);
+                        EditText textWelcome = (EditText) findViewById(R.id.txt_login);
                         Log.i(TAG,"into click event");
                         textWelcome.setText("Click event!!");
                         setContentView(R.layout.activity_grid_cdk_home);
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnLongClickListener(
                 new Button.OnLongClickListener(){
                     public boolean onLongClick(View v){
-                        TextView textWelcome = (TextView)findViewById(R.id.txtWelcome);
+                        TextView textWelcome = (TextView)findViewById(R.id.txt_login);
                         Log.i(TAG,"into long click event");
                         textWelcome.setText("Long click event!!");
                         return true;

@@ -16,7 +16,7 @@ public class CDKHomeGrid extends AppCompatActivity implements GestureDetector.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid_cdk_home);
-        myMessage = (Button) findViewById(R.id.btnHomeAbout);
+        //myMessage = (Button) findViewById(R.id.);
         this.gestureDetectorCompat = new GestureDetectorCompat(this, this);
         gestureDetectorCompat.setOnDoubleTapListener(this);
     }

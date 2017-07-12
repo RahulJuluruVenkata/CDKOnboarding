@@ -4,38 +4,40 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/top_text_input"
+        android:id="@+id/txt_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:hint="@string/place_holder_username"
         android:width="300dp"/>
 
     <EditText
-        android:id="@+id/top_text_input_bottom"
+        android:id="@+id/txt_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/top_text_input"
+        android:layout_below="@id/txt_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:hint="@string/place_holder_password"
         android:width="300dp"/>
 
     <Button
-        android:id="@+id/login_screen_btn"
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/top_text_input_bottom"
+        android:layout_below="@id/txt_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="@string/place_holder_login"
          />
 
     <fragment
-        android:id="@+id/fragment"
+        android:id="@+id/frg_cdk_global"
         android:name="com.cdk.onboarding.cdkapplication.CDKIconFragment"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@id/login_screen_btn"
+        android:layout_below="@id/btn_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         tools:layout="@layout/bottom_picture_fragment" />
