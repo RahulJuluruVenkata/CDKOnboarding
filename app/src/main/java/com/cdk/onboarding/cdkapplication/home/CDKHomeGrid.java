@@ -6,80 +6,21 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.cdk.onboarding.cdkapplication.R;
 
-public class CDKHomeGrid extends AppCompatActivity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
-
-    private Button myMessage;
-    private GestureDetectorCompat gestureDetectorCompat;
+public class CDKHomeGrid extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHomeBannerText("Edited");
         setContentView(R.layout.activity_grid_cdk_home);
-
-        //myMessage = (Button) findViewById(R.id.);
-        this.gestureDetectorCompat = new GestureDetectorCompat(this, this);
-        gestureDetectorCompat.setOnDoubleTapListener(this);
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        //checks for special type of gestures
-        this.gestureDetectorCompat.onTouchEvent(event);
-        return super.onTouchEvent(event);
-    }
-
-    //Begin gestures
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
-
-    @Override
-    public boolean onSingleTapConfirmed(MotionEvent motionEvent) {
-        myMessage.setText(R.string.app_name);
-        return false;
-    }
-
-    @Override
-    public boolean onDoubleTap(MotionEvent motionEvent) {
-        return false;
-    }
-
-    @Override
-    public boolean onDoubleTapEvent(MotionEvent motionEvent) {
-        return false;
-    }
-
-    @Override
-    public boolean onDown(MotionEvent motionEvent) {
-        return false;
-    }
-
-    @Override
-    public void onShowPress(MotionEvent motionEvent) {
-
-    }
-
-    @Override
-    public boolean onSingleTapUp(MotionEvent motionEvent) {
-        return false;
-    }
-
-    @Override
-    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
-        return false;
-    }
-
-    @Override
-    public void onLongPress(MotionEvent motionEvent) {
-
-    }
-
-    @Override
-    public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
-        return false;
+    //This gets called by top fragment when user clicks button
+    public void setHomeBannerText(String text){
+        //EditText text = (EditText)findViewById(R.id.);
     }
 }

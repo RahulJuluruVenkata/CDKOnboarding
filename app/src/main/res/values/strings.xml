@@ -9,4 +9,15 @@
         CDK Home page string variables
     -->
     <string name="cdk_home_page_banner">Welcome to CDK family!</string>
+    <string name="title_webpage_list">webpages</string>
+    <string name="title_webpage_detail">Webpage Detail</string>
+
+    <!--
+        CDK Menu items details
+    -->
+    <string name="menu_item_home">Home</string>
+    <string name="menu_item_my_details">My details</string>
+    <string name="menu_item_about_cdk">About CDK</string>
+    <string name="menu_item_raise_ticket">Raise tickets</string>
+    <string name="menu_item_logout">Logout</string>
 </resources>
