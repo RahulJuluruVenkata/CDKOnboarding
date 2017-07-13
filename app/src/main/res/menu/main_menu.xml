@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item android:title="@string/menu_item_home" />
+        <item android:title="@string/menu_item_my_details" />
+        <item android:title="@string/menu_item_about_cdk" />
+        <item android:title="@string/menu_item_raise_ticket" />
+        <item android:title="@string/menu_item_floor_plan" />
+        <item android:title="@string/menu_item_logout" />
+    </group>
+
+</menu>
