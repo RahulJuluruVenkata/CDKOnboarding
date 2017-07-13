@@ -7,20 +7,55 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
+
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+
+import android.view.MotionEvent;
 
 import com.cdk.onboarding.cdkapplication.R;
 
 public class CDKHomeGrid extends AppCompatActivity {
 
+    ViewGroup cdkHomeLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setHomeBannerText("Edited");
         setContentView(R.layout.activity_grid_cdk_home);
+
+        //demo of motion events and gestures
+        cdkHomeLayout = (ViewGroup)findViewById(R.id.activity_grid_cdk_home);
+        cdkHomeLayout.setOnTouchListener(
+            new RelativeLayout.OnTouchListener(){
+                public boolean onTouch(View v,MotionEvent motionEvent){
+                    moveBanner(v);
+                    return true;
+                }
+            }
+        );
+    }
+
+    private void moveBanner(View v) {
+        View homeBanner = findViewById(R.id.txt_cdk_home_banner);
+
+        //Change the position of banner
+        RelativeLayout.LayoutParams positionRules = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+        positionRules.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM,RelativeLayout.TRUE);
+        positionRules.addRule(RelativeLayout.ALIGN_PARENT_RIGHT,RelativeLayout.TRUE);
+
+        homeBanner.setLayoutParams(positionRules);
+
+        //Change the size of banner
+        ViewGroup.LayoutParams sizeRules = homeBanner.getLayoutParams();
+        sizeRules.height = 300;
+        sizeRules.width = 450;
+        homeBanner.setLayoutParams(sizeRules);
     }
 
     @Override
