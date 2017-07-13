@@ -2,12 +2,12 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="none">
-        <item android:title="@string/menu_item_home" />
-        <item android:title="@string/menu_item_my_details" />
-        <item android:title="@string/menu_item_about_cdk" />
-        <item android:title="@string/menu_item_raise_ticket" />
-        <item android:title="@string/menu_item_floor_plan" />
-        <item android:title="@string/menu_item_logout" />
+        <item android:id="@+id/menu_item_home" android:title="@string/menu_item_home" />
+        <item android:id="@+id/menu_item_my_details"  android:title="@string/menu_item_my_details" />
+        <item android:id="@+id/menu_item_about_cdk"  android:title="@string/menu_item_about_cdk" />
+        <item android:id="@+id/menu_item_raise_ticket"  android:title="@string/menu_item_raise_ticket" />
+        <item android:id="@+id/menu_item_floor_plan"  android:title="@string/menu_item_floor_plan" />
+        <item android:id="@+id/menu_item_logout"  android:title="@string/menu_item_logout" />
     </group>
 
 </menu>
