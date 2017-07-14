@@ -13,10 +13,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-
 import android.view.MotionEvent;
 
 import com.cdk.onboarding.cdkapplication.R;
+import com.cdk.onboarding.cdkapplication.about_cdk.AboutCDK;
+import com.cdk.onboarding.cdkapplication.floormap.CDKFloorMap;
+import com.cdk.onboarding.cdkapplication.login.MainActivity;
+import com.cdk.onboarding.cdkapplication.my_details.MyDetails;
+import com.cdk.onboarding.cdkapplication.raise_ticket.RaiseTicket;
+import com.cdk.onboarding.cdkapplication.utilities.CDKMenuUtilities;
+
+import android.content.Intent;
 
 public class CDKHomeGrid extends AppCompatActivity {
 
@@ -28,14 +35,14 @@ public class CDKHomeGrid extends AppCompatActivity {
         setContentView(R.layout.activity_grid_cdk_home);
 
         //demo of motion events and gestures
-        cdkHomeLayout = (ViewGroup)findViewById(R.id.activity_grid_cdk_home);
+        cdkHomeLayout = (ViewGroup) findViewById(R.id.activity_grid_cdk_home);
         cdkHomeLayout.setOnTouchListener(
-            new RelativeLayout.OnTouchListener(){
-                public boolean onTouch(View v,MotionEvent motionEvent){
-                    moveBanner(v);
-                    return true;
+                new RelativeLayout.OnTouchListener() {
+                    public boolean onTouch(View v, MotionEvent motionEvent) {
+                        moveBanner(v);
+                        return true;
+                    }
                 }
-            }
         );
     }
 
@@ -44,10 +51,10 @@ public class CDKHomeGrid extends AppCompatActivity {
 
         //Change the position of banner
         RelativeLayout.LayoutParams positionRules = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT
+                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT
         );
-        positionRules.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM,RelativeLayout.TRUE);
-        positionRules.addRule(RelativeLayout.ALIGN_PARENT_RIGHT,RelativeLayout.TRUE);
+        positionRules.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+        positionRules.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
 
         homeBanner.setLayoutParams(positionRules);
 
@@ -58,54 +65,18 @@ public class CDKHomeGrid extends AppCompatActivity {
         homeBanner.setLayoutParams(sizeRules);
     }
 
+    //Logic related to different actions related to contextual menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
-    }
-
-    //This gets called by top fragment when user clicks button
-    public void setHomeBannerText(String text){
-        RelativeLayout home_view = (RelativeLayout)findViewById(R.id.activity_grid_cdk_home);
-        EditText textControl = (EditText)home_view.findViewById(R.id.txt_cdk_home_banner);
-        textControl.setText(text);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        RelativeLayout home_view = (RelativeLayout)findViewById(R.id.activity_grid_cdk_home);
-        switch (item.getItemId()){
-            case R.id.menu_item_home:
-                if(item.isVisible()){
-                    home_view.setBackgroundColor(Color.GREEN);
-                }
-                break;
-            case R.id.menu_item_about_cdk:
-                if(item.isVisible()){
-                    home_view.setBackgroundColor(Color.GRAY);
-                }
-                break;
-            case R.id.menu_item_my_details:
-                if(item.isVisible()){
-                    home_view.setBackgroundColor(Color.RED);
-                }
-                break;
-            case R.id.menu_item_floor_plan:
-                if(item.isVisible()){
-                    home_view.setBackgroundColor(Color.BLUE);
-                }
-                break;
-            case R.id.menu_item_raise_ticket:
-                if(item.isVisible()){
-                    home_view.setBackgroundColor(Color.MAGENTA);
-                }
-                break;
-            case R.id.menu_item_logout:
-                if(item.isVisible()){
-                    home_view.setBackgroundColor(Color.YELLOW);
-                }
-                break;
-        }
+        CDKMenuUtilities.preProcessContentByMenuItem(this, item);
+        Intent i = CDKMenuUtilities.getIntentByMenuItem(this, item);
+        startActivity(i);
         return super.onOptionsItemSelected(item);
     }
 }

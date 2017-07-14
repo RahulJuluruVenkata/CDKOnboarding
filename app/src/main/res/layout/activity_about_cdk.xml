@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/AppTheme"
-    tools:context="com.cdk.onboarding.cdkapplication.raise_ticket.RaiseTicket">
+    tools:context="com.cdk.onboarding.cdkapplication.about_cdk.AboutCDK">
 
     <EditText
-        android:id="@+id/txt_raise_ticket"
+        android:id="@+id/txt_about_cdk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:enabled="false"
-        android:text="@string/menu_item_raise_ticket"
+        android:text="@string/menu_item_about_cdk"
         android:textColor="@color/common_google_signin_btn_text_light_pressed"
         android:textSize="30dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

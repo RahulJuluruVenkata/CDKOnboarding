@@ -1,11 +1,14 @@
 package com.cdk.onboarding.samplecodes;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.cdk.onboarding.cdkapplication.R;
 
@@ -22,6 +25,42 @@ public class CDKGesturesListenerSample extends AppCompatActivity implements Gest
         //myMessage = (Button) findViewById(R.id.);
         this.gestureDetectorCompat = new GestureDetectorCompat(this, this);
         gestureDetectorCompat.setOnDoubleTapListener(this);
+    }
+
+    private void changeBackGroundColorBasedOnMenuItem(MenuItem item){
+        RelativeLayout home_view = (RelativeLayout) findViewById(R.id.activity_grid_cdk_home);
+        switch (item.getItemId()) {
+            case R.id.menu_item_home:
+                if (item.isVisible()) {
+                    home_view.setBackgroundColor(Color.GREEN);
+                }
+                break;
+            case R.id.menu_item_about_cdk:
+                if (item.isVisible()) {
+                    home_view.setBackgroundColor(Color.GRAY);
+                }
+                break;
+            case R.id.menu_item_my_details:
+                if (item.isVisible()) {
+                    home_view.setBackgroundColor(Color.RED);
+                }
+                break;
+            case R.id.menu_item_floor_plan:
+                if (item.isVisible()) {
+                    home_view.setBackgroundColor(Color.BLUE);
+                }
+                break;
+            case R.id.menu_item_raise_ticket:
+                if (item.isVisible()) {
+                    home_view.setBackgroundColor(Color.MAGENTA);
+                }
+                break;
+            case R.id.menu_item_logout:
+                if (item.isVisible()) {
+                    home_view.setBackgroundColor(Color.YELLOW);
+                }
+                break;
+        }
     }
 
     @Override

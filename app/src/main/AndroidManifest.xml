@@ -22,7 +22,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".home.CDKHomeGrid" />
-        <activity android:name=".raise_ticket.RaiseTicket"></activity>
+        <activity android:name=".raise_ticket.RaiseTicket" />
+        <activity android:name=".floormap.CDKFloorMap" />
+        <activity android:name=".my_details.MyDetails" />
+        <activity android:name=".about_cdk.AboutCDK"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.cdk.onboarding.cdkapplication.raise_ticket;
+package com.cdk.onboarding.cdkapplication.floormap;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +9,12 @@ import android.view.MenuItem;
 import com.cdk.onboarding.cdkapplication.R;
 import com.cdk.onboarding.cdkapplication.utilities.CDKMenuUtilities;
 
-public class RaiseTicket extends AppCompatActivity {
+public class CDKFloorMap extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_raise_ticket);
+        setContentView(R.layout.activity_cdkfloor_map);
     }
 
     //Logic related to different actions related to contextual menu
