@@ -21,4 +21,9 @@
     <string name="menu_item_raise_ticket">Raise tickets</string>
     <string name="menu_item_logout">Logout</string>
     <string name="menu_item_floor_plan">Floor plan</string>
+
+    <!--
+        CDK Raise ticket
+     -->
+    <string name="title_raise_tickets">My Tickets</string>
 </resources>

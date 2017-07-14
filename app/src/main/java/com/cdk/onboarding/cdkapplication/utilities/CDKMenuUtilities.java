@@ -3,9 +3,11 @@ package com.cdk.onboarding.cdkapplication.utilities;
 /**
  * Created by julurur on 14/07/17.
  */
+
 import android.content.Intent;
-import android.view.MenuItem;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
+
 import com.cdk.onboarding.cdkapplication.R;
 import com.cdk.onboarding.cdkapplication.about_cdk.AboutCDK;
 import com.cdk.onboarding.cdkapplication.floormap.CDKFloorMap;

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "844365662282",
+    "project_id": "cdkonboardingapp"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844365662282:android:d965c9f79f9e93d0",
+        "android_client_info": {
+          "package_name": "com.cdk.onboarding.cdkapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844365662282-d11p62qfhlgg5dtmqgv0cb38r88a61dl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cdk.onboarding.cdkapplication",
+            "certificate_hash": "aed714014479e597e6d3570c7945b0b084ac3b6e"
+          }
+        },
+        {
+          "client_id": "844365662282-sk9p66fbpjg8sbdnn66mi0l4sbb1i8gp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa4OzSyurm2kTEasai_ZwDd7Xce5iGHc0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

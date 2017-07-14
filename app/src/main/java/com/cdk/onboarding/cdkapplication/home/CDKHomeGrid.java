@@ -1,29 +1,17 @@
 package com.cdk.onboarding.cdkapplication.home;
 
-import android.graphics.Color;
-import android.support.v4.view.GestureDetectorCompat;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.GestureDetector;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.view.MotionEvent;
 
 import com.cdk.onboarding.cdkapplication.R;
-import com.cdk.onboarding.cdkapplication.about_cdk.AboutCDK;
-import com.cdk.onboarding.cdkapplication.floormap.CDKFloorMap;
-import com.cdk.onboarding.cdkapplication.login.MainActivity;
-import com.cdk.onboarding.cdkapplication.my_details.MyDetails;
-import com.cdk.onboarding.cdkapplication.raise_ticket.RaiseTicket;
 import com.cdk.onboarding.cdkapplication.utilities.CDKMenuUtilities;
-
-import android.content.Intent;
 
 public class CDKHomeGrid extends AppCompatActivity {
 

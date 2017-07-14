@@ -1,7 +1,5 @@
 package com.cdk.onboarding.controller;
 
-import java.util.Random;
-
 /**
  * Created by julurur on 12/07/17.
  */
