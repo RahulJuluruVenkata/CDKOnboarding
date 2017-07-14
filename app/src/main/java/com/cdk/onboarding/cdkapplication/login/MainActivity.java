@@ -1,19 +1,10 @@
 package com.cdk.onboarding.cdkapplication.login;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.RelativeLayout;
-
-import android.graphics.Color;
-
-import android.widget.ImageView;
-import android.content.res.Resources;
-import android.util.TypedValue;
-
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cdk.onboarding.cdkapplication.R;

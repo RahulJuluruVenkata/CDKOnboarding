@@ -1,8 +1,9 @@
 package com.cdk.onboarding.cdkapplication.login;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -20,6 +21,14 @@ public class CDKLoginFragment extends Fragment {
 
     private static final String TAG = "CDKTag_Login_Fragment";
 
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            Log.i(TAG,"thread process is over");
+            super.handleMessage(msg);
+        }
+    };
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -33,17 +42,39 @@ public class CDKLoginFragment extends Fragment {
         final EditText txtUserName = (EditText) view.findViewById(R.id.txt_login);
         final EditText txtPassword = (EditText) view.findViewById(R.id.txt_password);
         loginButton.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        LoginController loginController = new LoginController();
-                        if (loginController.isValidUser(txtUserName.getText().toString(),txtPassword.getText().toString())) {
-                            buttonClicked(view);
-                            Intent myIntent = new Intent(getActivity(), CDKHomeGrid.class);
-                            getActivity().startActivity(myIntent);
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Runnable r = new Runnable() {
+                        @Override
+                        public void run() {
+                            //code to make application wait for 10 seconds
+                            long futureTime = System.currentTimeMillis() + 10000;
+                            while (System.currentTimeMillis() < futureTime){
+                                synchronized (this){
+                                    try{
+                                        wait(futureTime - System.currentTimeMillis());
+                                    }catch (Exception e){
+
+                                    }
+                                }
+                            }
+                            handler.sendEmptyMessage(0);
                         }
+                    };
+
+                    Thread loginThread = new Thread(r);
+                    loginThread.start();
+
+                    //continue code
+                    LoginController loginController = new LoginController();
+                    if (loginController.isValidUser(txtUserName.getText().toString(),txtPassword.getText().toString())) {
+                        buttonClicked(view);
+                        Intent myIntent = new Intent(getActivity(), CDKHomeGrid.class);
+                        getActivity().startActivity(myIntent);
                     }
                 }
+            }
         );
     }
 
