@@ -2,13 +2,13 @@ package com.cdk.onboarding.view.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.cdk.onboarding.cdkapplication.R;
 
 public class Home extends CDKOnboardGenericActivity {
@@ -29,18 +29,19 @@ public class Home extends CDKOnboardGenericActivity {
         Bundle bundle = i.getExtras();
         userName.setText(bundle.getString("username"));
         userMail.setText(bundle.getString("email"));
-        //Glide.with(this).load(bundle.getString("photoUrl")).into(userImage);
+        if(!"profileicon".equals(bundle.getString("photoUrl")))
+            Glide.with(this).load(bundle.getString("photoUrl")).into(userImage);
 
         //demo of motion events and gestures
-        cdkHomeLayout = (ViewGroup) findViewById(R.id.activity_grid_cdk_home);
-        cdkHomeLayout.setOnTouchListener(
-                new RelativeLayout.OnTouchListener() {
-                    public boolean onTouch(View v, MotionEvent motionEvent) {
-                        moveBanner(v);
-                        return true;
-                    }
-                }
-        );
+//        cdkHomeLayout = (ViewGroup) findViewById(R.id.activity_grid_cdk_home);
+//        cdkHomeLayout.setOnTouchListener(
+//                new RelativeLayout.OnTouchListener() {
+//                    public boolean onTouch(View v, MotionEvent motionEvent) {
+//                        moveBanner(v);
+//                        return true;
+//                    }
+//                }
+//        );
     }
 
     private void moveBanner(View v) {
