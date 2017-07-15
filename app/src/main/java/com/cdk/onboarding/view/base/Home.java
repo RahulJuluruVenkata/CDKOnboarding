@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.cdk.onboarding.cdkapplication.R;
 
+import butterknife.ButterKnife;
+
 public class Home extends CDKOnboardGenericActivity {
 
     ViewGroup cdkHomeLayout;
@@ -19,6 +21,8 @@ public class Home extends CDKOnboardGenericActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid_cdk_home);
+
+        ButterKnife.bind(this);
 
         //get login details from login screen
         TextView userName = (TextView)findViewById(R.id.txt_google_username);
