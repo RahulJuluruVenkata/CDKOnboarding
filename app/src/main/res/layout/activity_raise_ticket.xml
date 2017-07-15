@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme"
-    tools:context="com.cdk.onboarding.cdkapplication.raise_ticket.RaiseTicket">
+    tools:context="com.cdk.onboarding.view.raise_ticket.RaiseTicket"
+    android:id="@+id/row_ticket">
 
     <EditText
         android:id="@+id/txt_raise_ticket"
@@ -36,7 +37,7 @@
             android:padding="5dp"
             app:srcCompat="@drawable/admin" />
 
-        <MultiAutoCompleteTextView
+        <ListView
             android:id="@+id/txtView_ticket_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,6 +49,5 @@
             android:text="MultiAutoCompleteTextView" />
 
     </LinearLayout>
-
 
 </RelativeLayout>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cdk.onboarding.cdkapplication.floormap.CDKFloorMap">
+    tools:context="com.cdk.onboarding.view.floormap.FloorMap">
 
     <EditText
         android:id="@+id/txt_cdk_floor_map"

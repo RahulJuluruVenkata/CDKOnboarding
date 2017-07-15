@@ -4,16 +4,27 @@
 
     <!-- For requesting access -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
 
     <application
+        android:name="com.cdk.onboarding.CDKApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".login.MainActivity"
+            android:name="com.cdk.onboarding.view.main.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +32,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.CDKHomeGrid" />
-        <activity android:name=".raise_ticket.RaiseTicket" />
-        <activity android:name=".floormap.CDKFloorMap" />
-        <activity android:name=".my_details.MyDetails" />
-        <activity android:name=".about_cdk.AboutCDK"></activity>
+        <activity android:name="com.cdk.onboarding.view.main.MainActivity_Legacy" />
+        <activity android:name="com.cdk.onboarding.view.base.Home" />
+        <activity android:name="com.cdk.onboarding.view.raise_ticket.RaiseTicket" />
+        <activity android:name="com.cdk.onboarding.view.floormap.FloorMap" />
+        <activity android:name="com.cdk.onboarding.view.mydetails.MyDetails" />
+        <activity android:name="com.cdk.onboarding.view.about_cdk.AboutCDKOnboard" />
+        <activity android:name="com.cdk.onboarding.view.base.CDKOnboardGenericActivity" />
+        <activity android:name="com.cdk.onboarding.view.logout.Logout" />
     </application>
 
 </manifest>

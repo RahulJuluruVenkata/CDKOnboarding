@@ -26,4 +26,11 @@
         CDK Raise ticket
      -->
     <string name="title_raise_tickets">My Tickets</string>
+
+    <!--
+        Sample data
+    -->
+    <string name="txt_sample_user">Rahul Juluru</string>
+    <string name="txt_sample_user_email">rahul.juluru@gmail.com</string>
+    <string name="btn_logout_google_account">Logout</string>
 </resources>

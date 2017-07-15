@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/frg_cdk_global"
-        android:name="com.cdk.onboarding.cdkapplication.login.CDKIconFragment"
+        android:name="com.cdk.onboarding.view.base.CDKIcon"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignParentTop="true"
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/frg_login_fragment"
-        android:name="com.cdk.onboarding.cdkapplication.login.CDKLoginFragment"
+        android:name="com.cdk.onboarding.view.main.CDKLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/frg_cdk_global"
