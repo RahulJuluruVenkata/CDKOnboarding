@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.cdk.onboarding.cdkapplication.R;
-import com.cdk.onboarding.data.db.dao.helper.LoginHelper;
+import com.cdk.onboarding.networking.helper.LoginHelper;
 import com.cdk.onboarding.view.base.Home;
 
 public class CDKLogin extends Fragment {

@@ -7,6 +7,8 @@ import com.cdk.onboarding.view.base.CDKOnboardGenericActivity;
 
 public class AboutCDKOnboard extends CDKOnboardGenericActivity {
 
+    private static final String TAG = "AboutCDK";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

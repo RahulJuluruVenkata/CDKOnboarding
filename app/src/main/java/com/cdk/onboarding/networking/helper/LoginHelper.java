@@ -1,4 +1,4 @@
-package com.cdk.onboarding.data.db.dao.helper;
+package com.cdk.onboarding.networking.helper;
 
 /**
  * Created by julurur on 12/07/17.

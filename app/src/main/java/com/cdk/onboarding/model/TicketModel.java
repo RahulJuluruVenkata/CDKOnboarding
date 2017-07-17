@@ -1,4 +1,4 @@
-package com.cdk.onboarding.model.ticket;
+package com.cdk.onboarding.model;
 
 /**
  * Created by julurur on 14/07/17.

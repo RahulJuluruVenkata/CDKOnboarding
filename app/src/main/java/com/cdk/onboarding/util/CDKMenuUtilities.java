@@ -14,7 +14,7 @@ import com.cdk.onboarding.view.base.Home;
 import com.cdk.onboarding.view.floormap.FloorMap;
 import com.cdk.onboarding.view.main.MainActivity;
 import com.cdk.onboarding.view.mydetails.MyDetails;
-import com.cdk.onboarding.view.raise_ticket.RaiseTicket;
+import com.cdk.onboarding.view.raise_ticket.RaiseTicketMainActivity;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
@@ -38,7 +38,7 @@ public class CDKMenuUtilities {
                 i = new Intent(activity, FloorMap.class);
                 break;
             case R.id.menu_item_raise_ticket:
-                i = new Intent(activity, RaiseTicket.class);
+                i = new Intent(activity, RaiseTicketMainActivity.class);
                 break;
             case R.id.menu_item_logout:
                 i = new Intent(activity, MainActivity.class);

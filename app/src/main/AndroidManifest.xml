@@ -32,9 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.cdk.onboarding.view.main.MainActivity_Legacy" />
+        <activity android:name="com.cdk.onboarding.view.main.MainActivity_Legacy"
+            />
         <activity android:name="com.cdk.onboarding.view.base.Home" />
-        <activity android:name="com.cdk.onboarding.view.raise_ticket.RaiseTicket" />
+        <activity android:name="com.cdk.onboarding.view.raise_ticket.RaiseTicketMainActivity"/>
         <activity android:name="com.cdk.onboarding.view.floormap.FloorMap" />
         <activity android:name="com.cdk.onboarding.view.mydetails.MyDetails" />
         <activity android:name="com.cdk.onboarding.view.about_cdk.AboutCDKOnboard" />

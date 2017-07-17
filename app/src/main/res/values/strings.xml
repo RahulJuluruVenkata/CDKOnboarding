@@ -26,7 +26,13 @@
         CDK Raise ticket
      -->
     <string name="title_raise_tickets">My Tickets</string>
-
+    <string-array name="ticket_types">
+        <item>HR</item>
+        <item>Facilities</item>
+        <item>Admin</item>
+        <item>Manager</item>
+        <item>IT</item>
+    </string-array>
     <!--
         Sample data
     -->

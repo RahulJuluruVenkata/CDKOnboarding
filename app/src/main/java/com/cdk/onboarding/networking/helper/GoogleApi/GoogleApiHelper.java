@@ -1,4 +1,4 @@
-package com.cdk.onboarding.data.db.dao.helper.GoogleApi;
+package com.cdk.onboarding.networking.helper.GoogleApi;
 
 import android.content.Context;
 import android.location.Location;

@@ -2,7 +2,7 @@ package com.cdk.onboarding;
 
 import android.app.Application;
 
-import com.cdk.onboarding.data.db.dao.helper.GoogleApi.GoogleApiHelper;
+import com.cdk.onboarding.networking.helper.GoogleApi.GoogleApiHelper;
 
 
 public class CDKApplication extends Application {
